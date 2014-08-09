@@ -5,11 +5,26 @@
 ###COPYRIGHT###
 
 
+## CHECK if run_info via docker cp
+# if yes use it to re run the container
+# if not create it from docker inspect
+
+
 #############
-# docker inspect container get run infos take image do stuff kill old re run it from the image and
+# take image do stuff kill old re run it from the image and
 #
-docker build -t imagename -< 
-cat << EOF > | docker build -t imagename -<
+docker build -t imagename - << DOCKERFILE
 FROM ubuntu:14.04 
 RUN echo "Hello World" 
-EOF
+# ADD /home/frank/knock.status /
+DOCKERFILE
+############ Adding files
+# Adding files only works via the trick of mounting host volume into the contaier and then cp to target
+#################
+
+# ADD srcfolder trgfolder todo hornor.dockerignore takes builded image run container with mount bind 
+# rsync or cp folder to target and then commit running container to img done :D
+# get srcdir last folder name ${LSRCF}
+#
+######## DONT USE THAT CODE DANKER ITS NOT WORKING!!!!!
+#docker run --rm -t ${IMAGENAME} ${DOCKER_INSPECT} -v ${SRCDIR}:/tmp_fromhost/${LSRCF} "mkdir -p ${TRGDIR} && cp -r /tmp_fromhost/${LSRCF} ${TRGDIR} && "
