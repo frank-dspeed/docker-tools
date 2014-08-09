@@ -1,0 +1,9 @@
+#!/bin/bash
+#### Helper
+
+##### middle ware to check if a image is prepared for what we whant to do
+
+###### check if folder exists? else create it
+# RUN image mkdir -p get result 
+##### checks 
+
