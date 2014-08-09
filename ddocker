@@ -28,6 +28,8 @@
 # ddocker ginfo  - copys _info files out of it into a directory on host containerid/ folder files_info stores info files ;)
 # ddocker ainfo  - copys _info files out of it into a directory on host containerid/ folder files_info stores info files ;)
 
+# ddocker commit - parms image, cmd, // runs image with cmd and commits the result to image
+
 # ddocker clean - clean several modes
 #
 # on host create docker_container_infos/$HOSTNAME.imagename.ip._info
