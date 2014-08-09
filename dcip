@@ -1,0 +1,11 @@
+#!/bin/bash
+#############
+
+###############
+# Author Frank Lemanschik
+# Company Direkt SPEED Europe
+#################
+
+# parms: containerid/running imagename -g
+# returns: containerip or containerips by running imagename
+
