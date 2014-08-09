@@ -1,0 +1,38 @@
+#!/BIN/BASH
+
+# Bin ddocker
+#############
+# Author Frank Lemanschik
+# Company Direkt SPEED Europe
+#######
+
+# COMMANDS
+# ddocker run - A run command that starts a container cp run_info file and then delets the container and starts run_info file
+#             - TODO: NEED To make that work that the output reaches cool api or console
+#             - Allows you Full Futures like rebuild add stuff bind hostvolumen save to file in container
+#
+# ddocker ip  - parm = containerid/name gets the ip 
+# ddocker gnet. imagename gets ips and hostname ?ports from all containers running that image
+# 
+# ddocker gkill- kills all containers running a spezifed image
+#
+# Planed ddocker %docker comannd against a group of containers by running imagename
+#
+# ddocker cinstall containerid - will allow you to install docker-tools in the container it 
+#                               makes a image from the container then makes new image and installs docker-tools 
+#                               in it and then simply kills old container  with the new restarts  it with 
+#                               its old run instructions inserted into run_info file
+# ddocker cinst - Adds files from host to docker container via rebuilding 
+# ddocker expose- exposes network info to net_info file
+# ddocker info  - copys _info files out of it into a directory on host containerid/ folder files_info stores info files ;)
+# ddocker ginfo  - copys _info files out of it into a directory on host containerid/ folder files_info stores info files ;)
+# ddocker ainfo  - copys _info files out of it into a directory on host containerid/ folder files_info stores info files ;)
+
+# ddocker clean - clean several modes
+#
+# on host create docker_container_infos/$HOSTNAME.imagename.ip._info
+# on host check if infos are valid against docker ps if not mov to docker_container_infos_deleted/* only move none existing containers!
+#
+# infos to store: docker inspect, docker diff timestemped, _info files timestemped ln -s current
+# schedule info files and diff snapshoting. and check process overall
+# 
