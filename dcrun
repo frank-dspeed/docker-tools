@@ -1,0 +1,15 @@
+#!/bin/bash
+###############
+# Author Frank Lemanschik
+#
+###COPYRIGHT###
+
+
+#############
+# docker inspect container get run infos take image do stuff kill old re run it from the image and
+#
+docker build -t imagename -< 
+cat << EOF > | docker build -t imagename -<
+FROM ubuntu:14.04 
+RUN echo "Hello World" 
+EOF
