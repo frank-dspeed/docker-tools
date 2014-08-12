@@ -1,0 +1,2 @@
+#!/bin/bash
+docker -d run --name="$1" scratch $2 0
